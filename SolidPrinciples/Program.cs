@@ -18,6 +18,8 @@ namespace SolidPrinciples
     {
         static void Main(string[] args)
         {
+            #region Polymorphism 1
+
             Console.WriteLine("Example1");
             Console.WriteLine("----------");
 
@@ -30,6 +32,7 @@ namespace SolidPrinciples
             d.Say();    // Woof
 
             Console.WriteLine();
+
             Animal a1 = new Cat();
             var c = new Cat();
 
@@ -38,9 +41,13 @@ namespace SolidPrinciples
             a1.Say();   // Nothing to say - this is due to 'new' accessor
             c.Say();    // Meow
 
+            #endregion
+
             Console.WriteLine("----------");
             Console.WriteLine("\nExample2");
             Console.WriteLine("----------");
+
+            #region Polymorphism 2
 
             Car car1 = new Car();
             car1.DescribeCar();
@@ -53,6 +60,8 @@ namespace SolidPrinciples
             Minivan car3 = new Minivan();
             car3.DescribeCar();                             // 'Carries seven people' - as we wanted
             Console.WriteLine();
+
+            #endregion
 
             Console.WriteLine(Environment.NewLine + "Press any kex for exit");
             Console.ReadKey();
